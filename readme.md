@@ -12,9 +12,9 @@ Genre Identification users are able to:
 
 ## Architecture & Technologies
 Genre Identification is built with:
-* Javascript
+* `Javascript`
 * `D3.js` + `HTML` + `CSS3`
-* Webpack & Babel
+* `Webpack` & `Babel`
 * Additional technologies I have to figure out...
 
 ## Wireframe
