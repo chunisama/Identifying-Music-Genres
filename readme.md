@@ -18,8 +18,8 @@ Genre Identification is built with:
 * Additional technologies I have to figure out...
 
 ## Wireframe
-This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There wil a panel to refine and toggle the data by a song's attributes. Additionally, there will be links to Github and Linkedin at the footer.
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There wil a panel to refine and toggle the data by a song's attributes. Tentatively, a music player on the right of the interactive graph. Additionally, there will be links to Github and Linkedin at the footer. 
+![alt text](https://github.com/chunisama/mapping_genres/blob/master/images/Wireframe.jpg)
 
 
 ## Implementation Timeline
