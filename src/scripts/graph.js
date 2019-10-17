@@ -46,6 +46,7 @@ d3.json("../assets/data/genres.json").then((data) => {
   //Add y axis label
   svg.append("text")
     .attr("transform", "rotate(-90)")
+    .attr("class", "y-axis-label")
     .transition().duration(1000).attr("y", 50)
     .attr("x", 0 - (height / 2))
     .attr("text-anchor", "middle")
@@ -125,12 +126,107 @@ d3.json("../assets/data/genres.json").then((data) => {
     .attr("r", (d) => {return z(d.time_signature);})
     .style("fill", (d) => {return myColor(d.Key);})
   
+  //Buttons
   //Danceability button
   d3.select(".danceability").on("click",() => {
     svg.selectAll("circle")
       .transition()
       .duration(1000)
-      // .attr("cx", (d) => {return x(d.Energy);})
       .attr("cy", (d) => {return y(d.Danceability);})
-  })
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Danceability")
+  });
+  //Acousticness
+  d3.select(".acousticness").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("cy", (d) => {return y(d.Acousticness);})
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Acousticness")
+  });
+
+  d3.select(".liveness").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("cy", (d) => {return y(d.Liveness);})
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Liveness")
+  });
+
+  d3.select(".instrumentalness").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("cy", (d) => {return y(d.Instrumentalness);})
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Instrumentalness")
+  });
+  
+  d3.select(".valence").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("cy", (d) => {return y(d.Valence);})
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Valence")
+  });
+
+  d3.select(".speechness").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
+      .attr("cy", (d) => {return y(d.Speechness);})
+    svg.selectAll(".y-axis-label").remove()
+    svg.append("text")
+      .attr("class", "y-axis-label")
+      .attr("transform", "rotate(-90)")
+      .transition().duration(1000).attr("y", 50)
+      .attr("x", 0 - (height / 2))
+      .attr("text-anchor", "middle")
+      .attr("font-family", "Verdana")
+      .attr("font-size", "12px")
+      .text("Speechness")
+  });
 });
