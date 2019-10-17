@@ -25,7 +25,7 @@ d3.json("../assets/data/genres.json").then((data) => {
     .range([100, width]);
   svg.append("g")
     .attr("transform", "translate(0," + (height - 50) + ")")
-    .call(d3.axisBottom(x));
+    .transition().duration(1500).call(d3.axisBottom(x));
 
   //Add y axis
   const y = d3.scaleLinear()
@@ -33,12 +33,12 @@ d3.json("../assets/data/genres.json").then((data) => {
     .range([height - 50, 0]);
   svg.append("g")
     .attr("transform", "translate(" + 100 + ")")
-    .call(d3.axisLeft(y));
+    .transition().duration(1500).call(d3.axisLeft(y));
 
   //Add x axis label
   svg.append("text")
     .attr("text-anchor", "middle")
-    .attr("transform", "translate(" + (width / 2) + " ," + (height) + ")")
+    .transition().duration(1000).attr("transform", "translate(" + (width / 2) + " ," + (height) + ")")
     .attr("font-size", "12px")
     .attr("font-family", "Verdana")
     .text("Energy")
@@ -46,7 +46,7 @@ d3.json("../assets/data/genres.json").then((data) => {
   //Add y axis label
   svg.append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 50)
+    .transition().duration(1000).attr("y", 50)
     .attr("x", 0 - (height / 2))
     .attr("text-anchor", "middle")
     .attr("font-family", "Verdana")
@@ -76,7 +76,6 @@ d3.json("../assets/data/genres.json").then((data) => {
 
   //3 functions that show/update tooltip based off user mouse movement
   const showTooltip = (d) => {
-    // debugger
     tooltip
       .transition()
       .duration(200);
@@ -89,19 +88,17 @@ d3.json("../assets/data/genres.json").then((data) => {
   }
   
   const moveTooltip = (d) => {
-    // debugger
     tooltip
       .style("left", (d3.event.pageX+10) + "px")
       .style("top", (d3.event.pageY-10) + "px");
   }
 
   const hideTooltip = (d) => {
-    // debugger
     tooltip
-    .transition()
-    .duration(200)
-    .style("opacity", 0)
-    .style("z-index", -1);
+      .transition()
+      .duration(200)
+      .style("opacity", 0)
+      .style("z-index", -1);
   }
 
   //Add bubbles
@@ -113,31 +110,27 @@ d3.json("../assets/data/genres.json").then((data) => {
       .attr("class", "bubbles")
       .attr("cx", x(0))
       .attr("cy", y(0))
-      .attr("r", (d) => {return z(d.time_signature);})
-      .style("fill", (d) => {return myColor(d.Key);})
+      .attr("r", z(0))
+      //Tooltip triggers
       .on("mouseover", showTooltip)
       .on("mousemove", moveTooltip)
       .on("mouseleave", hideTooltip);
-  
+
+  //Loading transition
   svg.selectAll("circle")
     .transition()
     .duration(1000)
     .attr("cx", (d) => {return x(d.Energy);})
     .attr("cy", (d) => {return y(d.Valence);})
+    .attr("r", (d) => {return z(d.time_signature);})
+    .style("fill", (d) => {return myColor(d.Key);})
   
-
-
-    // .selectAll("dot")
-    // .data(data)
-    // .enter()
-    // .append("circle")
-    //   .attr("class", "bubbles")
+  //Danceability button
+  d3.select(".danceability").on("click",() => {
+    svg.selectAll("circle")
+      .transition()
+      .duration(1000)
       // .attr("cx", (d) => {return x(d.Energy);})
-      // .attr("cy", (d) => {return y(d.Valence);})
-    //   .attr("r", (d) => {return z(d.time_signature);})
-    //   .style("fill", (d) => {return myColor(d.Key);})
-    // //tooltip triggers
-    // .on("mouseover", showTooltip)
-    // .on("mousemove", moveTooltip)
-    // .on("mouseleave", hideTooltip);
+      .attr("cy", (d) => {return y(d.Danceability);})
+  })
 });

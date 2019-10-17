@@ -4,7 +4,11 @@
   opacity: 0.6;
 }
 .bubbles:hover {
-  stroke: black;
+  stroke: red;
+  stroke-width: 2px;
+  opacity: 1;
+  transition: color, 1s;
+  transition: opacity, 1s;
 }
 text {
   color: black;
