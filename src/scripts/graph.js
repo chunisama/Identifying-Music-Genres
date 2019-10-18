@@ -1,3 +1,5 @@
+import Genres from "../../assets/data/genres";
+
 //Testing logging data
 // d3.json("../assets/data/genres.json").then((data) => {
 //   console.log(data);
@@ -27,7 +29,7 @@ svg.append("text")
   .text("Identifying a Music Genre: What makes a genre unique?")
 
 //Reading data
-d3.json("../assets/data/genres.json").then((data) => {
+function buildGraph(data){
 
   //Add x axis
   const x = d3.scaleLinear()
@@ -243,4 +245,8 @@ d3.json("../assets/data/genres.json").then((data) => {
       .attr("font-size", "12px")
       .text("Speechness")
   });
-});
+};
+
+
+
+buildGraph(Genres);
