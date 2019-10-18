@@ -11,10 +11,20 @@ const margin = {top: 10, right: 20, bottom: 30, left: 50},
 const canvas = d3.select("body");
 const svg = canvas.append("svg")
   .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
+  .attr("height", 900 + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
     "translate(" + margin.left + "," + margin.top + ")");
+
+//Adding Title
+svg.append("text")
+  .attr("x", (width / 2))
+  .attr("y", 25 - (margin.top / 2))
+  .attr("text-anchor", "middle")
+  .style("font-size", "15px")
+  .attr("font-family", "Verdana")
+  .style("font-weight", 700)
+  .text("Identifying a Music Genre: What makes a genre unique?")
 
 //Reading data
 d3.json("../assets/data/genres.json").then((data) => {
@@ -24,13 +34,13 @@ d3.json("../assets/data/genres.json").then((data) => {
     .domain([0, 1])
     .range([100, width]);
   svg.append("g")
-    .attr("transform", "translate(0," + (height - 50) + ")")
+    .attr("transform", "translate(0," + (height) + ")")
     .transition().duration(1500).call(d3.axisBottom(x));
 
   //Add y axis
   const y = d3.scaleLinear()
     .domain([0,1])
-    .range([height - 50, 0]);
+    .range([height, 25]);
   svg.append("g")
     .attr("transform", "translate(" + 100 + ")")
     .transition().duration(1500).call(d3.axisLeft(y));
@@ -38,7 +48,7 @@ d3.json("../assets/data/genres.json").then((data) => {
   //Add x axis label
   svg.append("text")
     .attr("text-anchor", "middle")
-    .transition().duration(1000).attr("transform", "translate(" + (width / 2) + " ," + (height) + ")")
+    .transition().duration(1000).attr("transform", "translate(" + ((width / 2) + 50) + " ," + (height + 50) + ")")
     .attr("font-size", "12px")
     .attr("font-family", "Verdana")
     .text("Energy")
@@ -48,7 +58,7 @@ d3.json("../assets/data/genres.json").then((data) => {
     .attr("transform", "rotate(-90)")
     .attr("class", "y-axis-label")
     .transition().duration(1000).attr("y", 50)
-    .attr("x", 0 - (height / 2))
+    .attr("x", 0 - (height / 2) - 15)
     .attr("text-anchor", "middle")
     .attr("font-family", "Verdana")
     .attr("font-size", "12px")
@@ -162,6 +172,7 @@ d3.json("../assets/data/genres.json").then((data) => {
       .text("Acousticness")
   });
 
+  //Liveness
   d3.select(".liveness").on("click",() => {
     svg.selectAll("circle")
       .transition()
@@ -179,6 +190,7 @@ d3.json("../assets/data/genres.json").then((data) => {
       .text("Liveness")
   });
 
+  //Instrumentalness
   d3.select(".instrumentalness").on("click",() => {
     svg.selectAll("circle")
       .transition()
@@ -196,6 +208,7 @@ d3.json("../assets/data/genres.json").then((data) => {
       .text("Instrumentalness")
   });
   
+  //Valence
   d3.select(".valence").on("click",() => {
     svg.selectAll("circle")
       .transition()
@@ -213,6 +226,7 @@ d3.json("../assets/data/genres.json").then((data) => {
       .text("Valence")
   });
 
+  //Speechness
   d3.select(".speechness").on("click",() => {
     svg.selectAll("circle")
       .transition()

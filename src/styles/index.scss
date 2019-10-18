@@ -32,11 +32,13 @@ body{
 
 button {
   border: none;
-  width: 100px;
-  height: 30px;
-  background: none;
-  color: white;
-
+  width: 120px;
+  height: 40px;
+  background: gray;
+  color: whitesmoke;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 10px;
 }
 
 button:focus {
@@ -45,16 +47,9 @@ button:focus {
 
 button:hover {
   cursor: pointer;
+  transition: background-color, 1.5s;
+  background-color: rgb(10, 9, 9);
 }
 
-.button-wrapper {
-  margin: 5px;
-  max-width: 250px;
-  padding: 1rem;
-  position: relative;
-  background: linear-gradient(to right, black, gray);
-  padding: 3px;
-  border-radius: 10px;
-}
 
 
