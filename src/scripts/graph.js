@@ -20,12 +20,12 @@ const svg = canvas.append("svg")
 
 //Adding Title
 svg.append("text")
-  .attr("x", (width / 2))
-  .attr("y", 25 - (margin.top / 2))
+  .attr("x", (width / 2) + 50)
+  .attr("y", 10 - (margin.top / 2))
   .attr("text-anchor", "middle")
   .style("font-size", "15px")
   .attr("font-family", "Verdana")
-  .style("font-weight", 700)
+  .style("font-weight", 600)
   .text("Identifying a Music Genre: What makes a genre unique?")
 
 //Reading data

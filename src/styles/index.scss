@@ -26,7 +26,7 @@ body{
 
 .danceability, .instrumentalness, .valence, .speechness, .acousticness, .liveness {
   padding: 5px;
-  margin: 5px;
+  margin-left: 5px;
   font-family: Verdana;
 }
 
@@ -35,7 +35,7 @@ button {
   width: 120px;
   height: 40px;
   background: gray;
-  color: whitesmoke;
+  color: white;
   margin: 5px;
   padding: 3px;
   border-radius: 10px;
