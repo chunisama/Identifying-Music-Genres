@@ -7,10 +7,12 @@
   <title>Genre Identifier</title>
 </head>
 <body>
-  <link rel="stylesheet" href="./dist/main.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="./dist/main.js"></script>
+  <link rel="stylesheet" href="./dist/main.css">
   <div class="button-container">
+    <label class="desc-label">Welcome to Music Genre Identifier!</label>
+    <p class="description">Currently, there are 2880+ genres of music known to humankind. Our friends at Spotify and Every Noise at Once have published data that reflects songs by their different attributes such as valence, tempo, danceability, energy, loudness, etc. Music Genre Identifier seeks to explore the similarities and differences between a subset of 625 genres using a sample song's attributes in a simple, yet insightful scatterplot. Kindly, use the interactive buttons below to change the input y-data for every genre data plot. If you would like to understand the meaning of a song's attribute please hover over the button and a tooltip will provide additional insight.</p>
     <div class="button-wrapper">
       <button class="danceability">Danceability</button>
     </div>
@@ -29,7 +31,6 @@
     <div class="button-wrapper">
       <button class="liveness">Liveness</button>
     </div>
-    <p class="description"></p>
   </div>
 </body>
 </html>
