@@ -58,3 +58,21 @@ button:hover {
 .desc-label {
   font-family: Verdana;
   font-weight: 600; }
+
+.fab:hover {
+  cursor: pointer;
+}
+
+svg.svg-inline--fa.fa-github.fa-w-16 {
+  margin-top: 5px;
+  color: gray;
+  width: 30px;
+  height: 30px;
+}
+
+svg.svg-inline--fa.fa-linkedin.fa-w-14 {
+  margin-top: 5px;
+  color: gray;
+  width: 30px;
+  height: 30px;
+}

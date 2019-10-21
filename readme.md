@@ -17,12 +17,13 @@ Genre Identification is built with:
 
 
 ## Wireframe
-This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There wil a panel to refine and toggle the data by a song's attributes. Tentatively, a music player on the right of the interactive graph. Additionally, there will be links to Github and Linkedin at the footer. 
+This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There wil a panel to refine and toggle the data by a song's attributes. Additionally, there will be links to Github and Linkedin at the footer. 
 ![alt text](https://github.com/chunisama/Identifying_music_genres/blob/gh-pages/assets/images/Wireframe.jpg)
 
 
 ## Implementation Timeline
 * Refining data to json format 1.5 days
 * Implementing D3 1.5 days
+* Implementing interactive buttons and transitions using D3 and CSS 1 day
 
 
