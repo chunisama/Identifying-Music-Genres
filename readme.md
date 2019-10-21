@@ -7,7 +7,7 @@ Currently, there are 2880+ genres of music known to man. Spotify and Every Noise
 Genre Identification users are able to:
 * View a broad overview of every music genre known to human ears
 * Compare each genre to a it's corresponding song's attributes like energy, danceability, tempo, valence, tempo, instrumentalness, etc
-* User will be able to toggle between each song attribute to visualize key differences and similarities between each genre
+* User will be able to toggle via buttons between each song attribute to visualize key differences and similarities between each genre
 
 ## Architecture & Technologies
 Genre Identification is built with:
@@ -17,8 +17,8 @@ Genre Identification is built with:
 
 
 ## Wireframe
-This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There wil a panel to refine and toggle the data by a song's attributes. Additionally, there will be links to Github and Linkedin at the footer. 
-![alt text](https://wireframe.cc/0e8CjQ)
+This visualization will consist of a single screen containing an interactive graph that maps each song to its genre on the x axis. There will a button panel to refine and toggle the data by a song's attributes. Additionally, there will be links to Github and Linkedin underneath my button container. 
+![alt text]()
 
 
 ## Implementation Timeline
