@@ -1,4 +1,4 @@
-# Genre Identifier: A Music Genre Visualization
+# Genre Identifier: A Music Genre Visualization | [Live](https://chunisama.github.io/Identifying-Music-Genres/)
 
 ## Overview
 Currently, there are 2880+ genres of music known to man. Spotify and Every Noise at Once have published data that reflects songs by their different attributes such as valence, tempo, danceability, energy, loudness, speechness, instrumentalness, key, etc. With the umbrella attribute over each song, as their parent genre. Genre Identifier highlights a subset of 625 genres using a sample song's attributes to compare the key differences or similarities of every music genre known to humankind.
