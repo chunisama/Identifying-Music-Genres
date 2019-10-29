@@ -19,13 +19,13 @@ text {
   flex-direction: column;
   justify-content: center;
   width: 20%;
-  position: absolute;
-  right: 0;
-  top: 200px;
 }
 
 body {
-  display: flex; }
+  display: flex; 
+  flex-direction: row-reverse;
+  width: fit-content;
+}
 
 .danceability, .instrumentalness, .valence, .speechness, .acousticness, .liveness {
   padding: 5px;
