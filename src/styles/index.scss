@@ -40,7 +40,7 @@ button {
   border: none;
   width: 120px;
   height: 40px;
-  background: gray;
+  background: #d086d2;
   color: white;
   margin: 5px;
   padding: 3px;
@@ -52,7 +52,7 @@ button:focus {
 button:hover {
   cursor: pointer;
   transition: background-color, 1.5s;
-  background-color: #0a0909; }
+  background-color: #6fb0de; }
 
 .description {
   font-family: sans-serif;
@@ -75,15 +75,20 @@ button:hover {
 
 svg.svg-inline--fa.fa-github.fa-w-16 {
   margin-top: 5px;
-  color: gray;
+  color: #52d8c1;
   width: 30px;
   height: 30px; }
 
 svg.svg-inline--fa.fa-linkedin.fa-w-14 {
   margin-top: 5px;
-  color: gray;
+  color: #52d8c1;
   width: 30px;
   height: 30px; }
+
+  svg.svg-inline--fa.fa-linkedin.fa-w-14:hover, svg.svg-inline--fa.fa-github.fa-w-16:hover {
+    cursor: pointer;
+    transition: color, 1.5s;
+    color: #6fb0de; }
 
 .svg-container {
   display: inline-block;
