@@ -11,33 +11,50 @@
   src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"
   data-auto-a11y="true"></script>  
   <script src="https://d3js.org/d3.v5.min.js"></script>
+    <div class="modal-background show-modal" id="modal-background" onClick="closeModal()">
+      <div class="modal-child welcome" id="welcome-modal">
+        <div class="model-header-wrapper">
+          <div class="modal-exit">x</div>
+          <label class="desc-label">Welcome to Music Genre Identifier!</label>
+        </div>
+        <p class="description">Currently, there are 2880+ genres of music known to humankind. Our friends at Spotify and Every Noise at Once have published data that reflects songs by their different attributes such as valence, tempo, danceability, energy, loudness, etc. Music Genre Identifier seeks to explore the similarities and differences between a subset of 625 genres using a sample song's attributes in a simple, yet insightful scatterplot. Kindly, use the interactive buttons to your left in order to change the input y-data for every genre data plot. If you would like to understand the meaning of a song's attribute please hover over the button and a tooltip will provide additional insight.</p>
+      </div>
+    </div>
+    <link rel="stylesheet" href="./dist/main.css">
   <script src="./dist/main.js"></script>
-  <link rel="stylesheet" href="./dist/main.css">
-  <div class="button-container">
-    <label class="desc-label">Welcome to Music Genre Identifier!</label>
-    <p class="description">Currently, there are 2880+ genres of music known to humankind. Our friends at Spotify and Every Noise at Once have published data that reflects songs by their different attributes such as valence, tempo, danceability, energy, loudness, etc. Music Genre Identifier seeks to explore the similarities and differences between a subset of 625 genres using a sample song's attributes in a simple, yet insightful scatterplot. Kindly, use the interactive buttons below to change the input y-data for every genre data plot. If you would like to understand the meaning of a song's attribute please hover over the button and a tooltip will provide additional insight.</p>
-    <div class="button-wrapper">
-      <button class="danceability">Danceability</button>
-    </div>
-    <div class="button-wrapper">
-      <button class="instrumentalness">Instrumentalness</button>
-    </div>
-    <div class="button-wrapper">
-      <button class="valence">Valence</button>
-    </div>
-    <div class="button-wrapper">
-      <button class="speechness">Speechness</button>
-    </div>
-    <div class="button-wrapper">
-      <button class="acousticness">Acousticness</button>
-    </div>
-    <div class="button-wrapper">
-      <button class="liveness">Liveness</button>
-    </div>
-    <div class="button-wrapper">
-      <a href="https://github.com/chunisama/Identifying_music_genres"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/eugene-chung-41489ab1"><i class="fab fa-linkedin"></i></a>
+  <div class="visual-container">
+    <div class="button-container">
+      <div class="button-wrapper">
+        <button class="danceability">Danceability</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="instrumentalness">Instrumentalness</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="valence">Valence</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="speechness">Speechness</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="acousticness">Acousticness</button>
+      </div>
+      <div class="button-wrapper">
+        <button class="liveness">Liveness</button>
+      </div>
+      <div class="button-wrapper">
+        <a href="https://github.com/chunisama/Identifying_music_genres"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/eugene-chung-41489ab1"><i class="fab fa-linkedin"></i></a>
+      </div>
     </div>
   </div>
 </body>
+<script>
+    const modal = document.getElementById("modal-background");
+    function closeModal(){
+      if (modal.classList.contains('show-modal')) {
+        modal.classList.remove('show-modal');
+      }
+    }
+</script>
 </html>

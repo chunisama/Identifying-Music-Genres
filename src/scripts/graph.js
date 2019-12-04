@@ -5,15 +5,26 @@ import Genres from "../../assets/data/genres";
 // });
 document.addEventListener("DOMContentLoaded", () => {
   const margin = {top: 10, right: 20, bottom: 30, left: 50},
-      width = 1500 - margin.left - margin.right,
-      height = 900 - margin.top - margin.bottom;
+      width = 1200 - margin.left - margin.right,
+      height = 550 - margin.top - margin.bottom;
   
   //Create svg element
-  const canvas = d3.select("body");
-  const svg = canvas.append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", 900 + margin.top + margin.bottom)
-    .attr("position", "absolute")
+  const canvas = d3.select(".visual-container");
+  
+  //Adding a container class to make it responsive
+  const container = canvas.append("div")
+    .classed("svg-container", true) 
+
+  const svg = container.append("svg")
+    // Responsive SVG needs these 2 attributes and no width and height attr.
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 1200 600")
+    // Class to make it responsive.
+    .classed("svg-content-responsive", true)
+
+    // .attr("width", width + margin.left + margin.right)
+    // .attr("height", 900 + margin.top + margin.bottom)
+    // .attr("position", "absolute")
     .append("g")
       .attr("transform",
       "translate(" + margin.left + "," + margin.top + ")");
@@ -23,10 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .attr("x", (width / 2) + 50)
     .attr("y", 10 - (margin.top / 2))
     .attr("text-anchor", "middle")
-    .style("font-size", "15px")
-    .style("font-family", "Verdana")
+    .style("font-size", "20px")
+    .style("font-family",'sans-serif')
     .style("font-weight", 600)
-    .text("Music Genre Identifier: What makes a genre unique?")
+    .style("letter-spacing", 1)
+    .text("Music Genre Identifier: What Makes A Genre Unique?")
   
   
   //Reading data
@@ -53,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .attr("text-anchor", "middle")
       .transition().duration(1000).attr("transform", "translate(" + ((width / 2) + 50) + " ," + (height + 50) + ")")
       .style("font-size", "12px")
-      .style("font-family", "Verdana")
+      .style("font-family", "sans-serif")
       .text("Energy")
     
     //Add y axis label
@@ -63,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .transition().duration(1000).attr("y", 50)
       .attr("x", 0 - (height / 2) - 15)
       .attr("text-anchor", "middle")
-      .style("font-family", "Verdana")
+      .style("font-family", "sans-serif")
       .style("font-size", "12px")
       .text("Valence")
   
@@ -87,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .style("border-radius", "5px")
         .style("padding", "10px")
         .style("color", "white")
+        .style("font-family", "sans-serif")
   
     //3 functions that show/update tooltip based off user mouse movement
     const showTooltip = (d) => {
@@ -155,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .style("opacity", 0)
         .attr("class", "buttonTooltip")
         .style("position", "absolute")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .style("font-weight", "300")
         .style("background-color", "black")
@@ -176,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .text("Danceability")
     });
@@ -211,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .text("Acousticness")
     });
@@ -246,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .text("Liveness")
     });
@@ -283,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .style("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .attr("font-size", "12px")
         .text("Instrumentalness")
     });
@@ -319,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .text("Valence")
     });
@@ -356,7 +369,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition().duration(1000).attr("y", 50)
         .attr("x", 0 - (height / 2))
         .attr("text-anchor", "middle")
-        .style("font-family", "Verdana")
+        .style("font-family", "sans-serif")
         .style("font-size", "12px")
         .text("Speechness")
     });
