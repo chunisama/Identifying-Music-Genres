@@ -24,7 +24,7 @@ text {
 .visual-container {
   display: flex;
   height: 100%;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 .danceability, .instrumentalness, .valence, .speechness, .acousticness, .liveness {
