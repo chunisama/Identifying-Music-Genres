@@ -18,18 +18,14 @@ text {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  position: relative;
-  top: 150px;
-  z-index: 2;
+  width: 20%;
 }
 
 .visual-container {
   display: flex;
+  height: 100%;
   flex-direction: row-reverse;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content; }
+}
 
 .danceability, .instrumentalness, .valence, .speechness, .acousticness, .liveness {
   padding: 5px;
@@ -85,22 +81,20 @@ svg.svg-inline--fa.fa-linkedin.fa-w-14 {
   width: 30px;
   height: 30px; }
 
-  svg.svg-inline--fa.fa-linkedin.fa-w-14:hover, svg.svg-inline--fa.fa-github.fa-w-16:hover {
-    cursor: pointer;
-    transition: color, 1.5s;
-    color: #6fb0de; }
+svg.svg-inline--fa.fa-linkedin.fa-w-14:hover, svg.svg-inline--fa.fa-github.fa-w-16:hover {
+  cursor: pointer;
+  transition: color, 1.5s;
+  color: #6fb0de; }
 
 .svg-container {
   display: inline-block;
-  position: absolute;
-  width: 95%;
-  vertical-align: top; }
+  width: 215%;
+  vertical-align: top;
+}
 
 .svg-content-responsive {
   display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 1140px; }
+}
 
 .modal-background {
   display: none !important;

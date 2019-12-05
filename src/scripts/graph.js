@@ -4,7 +4,7 @@ import Genres from "../../assets/data/genres";
 //   console.log(data);
 // });
 document.addEventListener("DOMContentLoaded", () => {
-  const margin = {top: 10, right: 20, bottom: 30, left: 50},
+  const margin = {top: 10, right: 20, bottom: 10, left: 0},
       width = 1200 - margin.left - margin.right,
       height = 550 - margin.top - margin.bottom;
   
@@ -201,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
@@ -381,7 +381,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .transition()
         .duration(200)
         .style("opacity", 1)
-        .style("left", (d3.event.pageX+50) + "px")
+        .style("left", (d3.event.pageX-300) + "px")
         .style("top", (d3.event.pageY-20) + "px")
     });
 
