@@ -6,7 +6,7 @@ import Genres from "../../assets/data/genres";
 document.addEventListener("DOMContentLoaded", () => {
   const margin = {top: 10, right: 20, bottom: 10, left: 0},
       width = 1200 - margin.left - margin.right,
-      height = 550 - margin.top - margin.bottom;
+      height = 600 - margin.top - margin.bottom;
   
   //Create svg element
   const canvas = d3.select(".visual-container");
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const svg = container.append("svg")
     // Responsive SVG needs these 2 attributes and no width and height attr.
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 1200 600")
+    .attr("viewBox", "0 0 1200 750")
     // Class to make it responsive.
     .classed("svg-content-responsive", true)
 
